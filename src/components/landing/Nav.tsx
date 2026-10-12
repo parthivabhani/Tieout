@@ -27,7 +27,8 @@ export function Nav() {
           <TieoutWordmark />
           <span className="hidden h-5 w-px bg-rule sm:block" />
           <span className="hidden items-center gap-2 text-xs font-medium text-soft sm:flex">
-            built for <EcommaLogo className="h-[22px] sm:h-[24px] w-auto text-navy-900" />
+            <span className="translate-y-[3.5px]">built for</span>
+            <EcommaLogo className="h-[22px] sm:h-[24px] w-auto text-navy-900" />
           </span>
         </Link>
         <nav className={clsx("ml-auto hidden items-center gap-7 rounded-full px-5 py-2 text-[13.5px] font-medium text-muted transition md:flex", !scrolled && "bg-white/90 shadow-sm backdrop-blur")}>

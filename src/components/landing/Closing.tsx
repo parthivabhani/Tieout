@@ -55,7 +55,7 @@ export function Closing() {
           <div className="flex items-center gap-4">
             <TieoutWordmark dark />
             <span className="h-5 w-px bg-white/15" />
-            <span className="flex items-center gap-2">concept for <EcommaLogo className="h-[20px] sm:h-[22px] w-auto text-white" /></span>
+            <span className="flex items-center gap-2"><span className="translate-y-[3.5px]">concept for</span> <EcommaLogo className="h-[20px] sm:h-[22px] w-auto text-white" /></span>
           </div>
           <div className="max-w-md sm:text-right">
             A concept by {site.team}, {site.school}. Not an Ecomma product. All deal data is fictional.
