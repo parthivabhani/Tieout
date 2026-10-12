@@ -1,8 +1,8 @@
 # Tieout
 
 <p align="center">
-  <img src="public/brand/tieout-logo-light.png#gh-light-mode-only" alt="Tieout Logo" width="380" />
-  <img src="public/brand/tieout-logo-dark.png#gh-dark-mode-only" alt="Tieout Logo" width="380" />
+  <img src="public/brand/Tieout logo.png.png#gh-light-mode-only" alt="Tieout Logo" width="380" />
+  <img src="public/brand/Tieout logo.png#gh-dark-mode-only" alt="Tieout Logo" width="380" />
 </p>
 
 <p align="center">
