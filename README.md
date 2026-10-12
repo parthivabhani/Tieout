@@ -1,5 +1,3 @@
-# Tieout
-
 <p align="center">
   <img src="public/brand/Tieout logo.png.png#gh-light-mode-only" alt="Tieout Logo" width="380" />
   <img src="public/brand/Tieout logo.png#gh-dark-mode-only" alt="Tieout Logo" width="380" />
