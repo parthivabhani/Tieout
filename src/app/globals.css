@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Ecomma brand tokens (from ecomma.co) plus a few status colours for the app. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --color-navy-950: #060b18;
+  --color-navy-900: #0f172a;
+  --color-navy-850: #131c31;
+  --color-navy-800: #182239;
+  --color-navy-700: #222e4a;
+  --color-navy-600: #2f3c5c;
+  --color-brand: #073877;
+  --color-brand-deep: #0a4a9a;
+  --color-cyan: #57cafb;
+  --color-cyan-soft: #d6f0fb;
+  --color-cyan-tint: #ecf8fe;
+  --color-mint: #17a673;
+  --color-mint-soft: #d9f3e8;
+  --color-ink: #111827;
+  --color-body: #1f2937;
+  --color-muted: #4b5563;
+  --color-soft: #6b7280;
+  --color-rule: #e5e7eb;
+  --color-paper: #f6f9fc;
+
+  --color-crit: #f0605d;
+  --color-serious: #f29a4a;
+  --color-warn: #f5c04a;
+  --color-good: #2fc28a;
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
+html { scroll-behavior: smooth; }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Dark app surfaces */
+.app-bg {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(87, 202, 251, 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(10, 74, 154, 0.25), transparent 60%),
+    var(--color-navy-950);
+}
+.panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015));
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 28px;
+}
+.panel-inner {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+}
+.grain::after {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none; opacity: .06; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { scrollbar-width: none; }
